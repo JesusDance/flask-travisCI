@@ -1,0 +1,33 @@
+# Віртуальне середовище
+venv/
+.env/
+.venv/
+
+# Артефакти Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Кеші та проміжні файли
+*.log
+*.tmp
+*.temp
+
+# Кеші інструментів
+.mypy_cache/
+.pytest_cache/
+.cache/
+
+# Артефакти пакетування
+build/
+dist/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+
+# Секрети (якщо є локальні)
+*.env
+*.env.local
