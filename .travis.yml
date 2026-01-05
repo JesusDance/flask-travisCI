@@ -3,4 +3,6 @@ python:
   - "3.12"
 install:
   - pip install -r requirements.txt
-script: pytest tests/
+script:
+  - cd lesson_3
+  - pytest tests/
