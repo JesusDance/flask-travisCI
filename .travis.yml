@@ -2,10 +2,5 @@ language: python
 python:
   - "3.13"
 install:
-  - pip install --upgrade pip
   - pip install -r requirements.txt
-script:
-  - PYTHONPATH=lesson_3 pytest lesson_3/tests/
-branches:
-  only:
-    - main
+script: python -m pytest tests/
