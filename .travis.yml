@@ -5,4 +5,4 @@ install:
   - pip install --upgrade pip
   - pip install -r requirements.txt
 script:
-  - pytest lesson_3/tests/
+  - PYTHONPATH=lesson_3 pytest lesson_3/tests/
