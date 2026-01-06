@@ -11,19 +11,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      # Отримати код репо
+      - uses: actions/checkout@v3
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      # Встановити Python 3.13
+      - uses: actions/setup-python@v4
         with:
           python-version: "3.13"
 
-      - name: Install dependencies
-        run: |
+      # Встановити залежності
+      - run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Pytest
-        working-directory: lesson_3
-        run: pytest tests/
+      # Запустити тести
+      - run: pytest lesson_3/tests/
