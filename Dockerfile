@@ -5,4 +5,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN flask db upgrade
 EXPOSE $PORT
 # CMD gunicorn -w 4 --bind 0.0.0.0:$PORT "app:create_app()" --reload
-CMD ["/bin/sh", "-c", "gunicorn -w 4 --bind 0.0.0.0:$PORT app:create_app"]
+# CMD ["/bin/sh", "-c", "gunicorn -w 4 --bind 0.0.0.0:$PORT app:create_app"]
+CMD ["/bin/sh", "-c", "gunicorn -w 4 --bind 0.0.0.0:$PORT app:app"]
