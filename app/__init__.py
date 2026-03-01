@@ -43,5 +43,3 @@ def create_app():
     app.register_blueprint(swagger_ui_blueprint)
 
     return app
-
-app = create_app()
