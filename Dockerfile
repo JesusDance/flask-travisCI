@@ -6,4 +6,6 @@ RUN flask db upgrade
 EXPOSE $PORT
 # CMD gunicorn -w 4 --bind 0.0.0.0:$PORT "app:create_app()" --reload
 # CMD ["/bin/sh", "-c", "gunicorn -w 4 --bind 0.0.0.0:$PORT app:create_app"]
-CMD ["/bin/sh", "-c", "gunicorn -w 4 --bind 0.0.0.0:$PORT app:app"]
+# CMD ["/bin/sh", "-c", "gunicorn -w 4 --bind 0.0.0.0:$PORT app:app"]
+
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:$PORT", "app:app"]
